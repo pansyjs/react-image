@@ -1,0 +1,17 @@
+{
+  "name": "@pansy/react-image",
+  "version": "1.0.0",
+  "description": "react image component",
+  "main": "index.js",
+  "repository": "git@github.com:pansyjs/react-image.git",
+  "author": "wangxingkang <wang_xingakang@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "father-doc": "^1.0.0-alpha.18",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typescript": "^3.7.5"
+  }
+}
