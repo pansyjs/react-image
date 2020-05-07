@@ -2,7 +2,13 @@
   "name": "@pansy/react-image",
   "version": "1.0.0",
   "description": "react image component",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "es",
+    "lib"
+  ],
   "repository": "git@github.com:pansyjs/react-image.git",
   "author": "wangxingkang <wang_xingakang@qq.com>",
   "license": "MIT",
