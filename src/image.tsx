@@ -1,4 +1,5 @@
 import React, { Component, CSSProperties } from 'react';
+import FitImage from './fit';
 
 export interface ImageProps {
   prefixCls?: string;
@@ -18,6 +19,8 @@ interface ImageState {
 
 class Image extends Component<ImageProps, ImageState> {
   public imageRef: HTMLImageElement | null = null;
+
+  static Fit: typeof FitImage;
 
   constructor(props: ImageProps) {
     super(props);
