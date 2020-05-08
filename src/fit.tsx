@@ -7,6 +7,7 @@ interface ImageInfo {
 }
 
 interface FitImageProps {
+  prefixCls?: string;
   className?: string;
   style?: CSSProperties;
   src: string;
@@ -23,6 +24,10 @@ interface FitImageState {
 class FitImage extends Component<FitImageProps, FitImageState> {
   private container = createRef<HTMLDivElement>();
   private image  = createRef<HTMLImageElement>();
+
+  static defaultProps: Partial<FitImageProps> = {
+    prefixCls: 'pansy-fit-image'
+  }
 
   constructor(props: FitImageProps) {
     super(props);
@@ -75,8 +80,6 @@ class FitImage extends Component<FitImageProps, FitImageState> {
       imageInfo: { ratio, width, height }
     } = this.state;
 
-    console.log(this.state.imageInfo);
-
     if (ratio) {
       const { containerWidth, containerHeight } = this.getContainerDims();
       let containerRatio = containerWidth / containerHeight;
@@ -128,18 +131,21 @@ class FitImage extends Component<FitImageProps, FitImageState> {
   }
 
   render() {
-    const { className, style, src } = this.props;
+    const { prefixCls, className, style, src } = this.props;
     const { imageInfo, ...rest } = this.state;
+
+    const cls = [prefixCls, className];
 
     return (
       <div
-        className={className}
+        className={cls.join(' ')}
         style={{
           position: 'relative',
           width: '100%',
           height: '100%',
           overflow: 'hidden',
           background: '#F5F5F5',
+          display: 'inline-block',
           ...style
         }}
         ref={this.container}
