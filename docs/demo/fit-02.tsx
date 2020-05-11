@@ -6,7 +6,7 @@ const Example: FC = () => {
   return (
     <Image.Fit
       style={{ width: 300, height: 200 }}
-      src="https://aip.bdstatic.com/portal-pc-node/dist/1588235213450/images/technology/face/detect/demo-card-1.jpg"
+      src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589203931745&di=97c716bb81bf61f79a694c14a10ce3dd&imgtype=0&src=http%3A%2F%2Fwww.qnsb.com%2Ffzepaper%2Fsite1%2Fqnsb%2Fres%2F1%2F1%2F2008-01%2F29%2FB14%2Fres04_attpic_brief.jpg"
     />
   )
 }

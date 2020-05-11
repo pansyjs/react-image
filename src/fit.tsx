@@ -95,7 +95,7 @@ class FitImage extends Component<FitImageProps, FitImageState> {
         const top = (containerHeight - imageHeight) / 2;
 
         this.setState({
-          width: containerWidth,
+          width: imageWidth,
           height: imageHeight,
           top,
           left: 0
@@ -110,7 +110,7 @@ class FitImage extends Component<FitImageProps, FitImageState> {
         const left = (containerWidth - imageWidth) / 2;
 
         this.setState({
-          width: containerWidth,
+          width: imageWidth,
           height: imageHeight,
           top: 0,
           left
