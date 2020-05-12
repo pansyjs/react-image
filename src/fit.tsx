@@ -23,7 +23,7 @@ interface FitImageState {
 
 class FitImage extends Component<FitImageProps, FitImageState> {
   private container = createRef<HTMLDivElement>();
-  private image  = createRef<HTMLImageElement>();
+  private image = createRef<HTMLImageElement>();
 
   static defaultProps: Partial<FitImageProps> = {
     prefixCls: 'pansy-fit-image'
@@ -52,7 +52,7 @@ class FitImage extends Component<FitImageProps, FitImageState> {
         imageInfo: {
           width,
           height,
-          ratio: ratio > 1 ? ratio - 1 : ratio
+          ratio: ratio
         }
       });
 
@@ -75,6 +75,10 @@ class FitImage extends Component<FitImageProps, FitImageState> {
     };
   }
 
+  getWidthHeight = (length: number, ratio: number): number => {
+    return ratio > 1 ? length / ratio : length * ratio;
+  }
+
   handleResize = () => {
     const {
       imageInfo: { ratio, width, height }
@@ -82,16 +86,13 @@ class FitImage extends Component<FitImageProps, FitImageState> {
 
     if (ratio) {
       const { containerWidth, containerHeight } = this.getContainerDims();
-      let containerRatio = containerWidth / containerHeight;
-      containerRatio = containerRatio > 1 ? containerRatio - 1 : containerRatio;
-
       const widthRatio = width / containerWidth;
       const heightRatio = height / containerWidth;
 
       // 宽度充满
       if (widthRatio > heightRatio) {
         const imageWidth = containerWidth;
-        const imageHeight = imageWidth * ratio;
+        const imageHeight = this.getWidthHeight(containerWidth, ratio);
         const top = (containerHeight - imageHeight) / 2;
 
         this.setState({
@@ -106,7 +107,7 @@ class FitImage extends Component<FitImageProps, FitImageState> {
 
       if (widthRatio < heightRatio) {
         const imageHeight = containerHeight;
-        const imageWidth = imageHeight * ratio;
+        const imageWidth = this.getWidthHeight(containerHeight, ratio);
         const left = (containerWidth - imageWidth) / 2;
 
         this.setState({
