@@ -1,6 +1,6 @@
 {
   "name": "@pansy/react-image",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "react image component",
   "main": "lib/index.js",
   "module": "es/index.js",
