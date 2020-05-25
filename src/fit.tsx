@@ -41,8 +41,22 @@ class FitImage extends Component<FitImageProps, FitImageState> {
   }
 
   componentDidMount() {
-    const image = this.image.current as HTMLImageElement;
+    this._loadImage();
     window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillReceiveProps(props) {
+    if (this.props.src !== props.src) {
+      this._loadImage();
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  _loadImage = () => {
+    const image = this.image.current as HTMLImageElement;
 
     image.addEventListener('load', () => {
       const { width, height } = image;
@@ -56,14 +70,8 @@ class FitImage extends Component<FitImageProps, FitImageState> {
         }
       });
 
-      setTimeout(() => {
-        this.handleResize();
-      }, 0);
+      this.handleResize();
     });
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
   }
 
   getContainerDims() {
@@ -139,7 +147,7 @@ class FitImage extends Component<FitImageProps, FitImageState> {
 
     return (
       <div
-        className={cls.join(' ')}
+        className={cls.join(' ').trim()}
         style={{
           position: 'relative',
           width: '100%',
