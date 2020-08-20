@@ -1,7 +1,7 @@
 import React, { CSSProperties, Component } from 'react';
-import loadImage from './utils/load-image';
-import isModern from './utils/is-modern';
-import './fit.less';
+import loadImage from '../utils/load-image';
+import isModern from '../utils/is-modern';
+import '../styles/fit.less';
 
 interface FitImageProps {
   prefixCls?: string;

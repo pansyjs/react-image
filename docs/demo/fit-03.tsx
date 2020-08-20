@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 // @ts-ignore
 import Image from '@pansy/react-image';
 
-const Example: FC = () => {
+export default () => {
   return (
     <div style={{ width: 168, height: 104.7 }}>
       <Image.Fit
@@ -11,6 +11,3 @@ const Example: FC = () => {
     </div>
   )
 }
-
-export default Example;
-
