@@ -1,4 +1,4 @@
-import React, { CSSProperties, Component } from 'react';
+import React from 'react';
 import loadImage from '../utils/load-image';
 import isModern from '../utils/is-modern';
 import '../styles/fit.less';
@@ -6,7 +6,7 @@ import '../styles/fit.less';
 interface FitImageProps {
   prefixCls?: string;
   className?: string;
-  style?: CSSProperties;
+  style?: React.CSSProperties;
   src: string;
   fit?: 'auto' | 'contain' | 'cover';
   background?: boolean;
@@ -25,7 +25,7 @@ enum States {
   DEAD = 3
 }
 
-class FitImage extends Component<FitImageProps, FitImageState> {
+class FitImage extends React.Component<FitImageProps, FitImageState> {
 
   static defaultProps: Partial<FitImageProps> = {
     prefixCls: 'pansy-fit-image',
