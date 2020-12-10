@@ -27,7 +27,7 @@
     "@types/react-dom": "16.9.7",
     "@walrus/cli": "1.3.0",
     "@walrus/plugin-release": "1.8.0",
-    "dumi": "1.0.21",
+    "dumi": "1.0.38",
     "father-build": "1.18.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
