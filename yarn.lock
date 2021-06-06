@@ -2981,6 +2981,24 @@
     resolve-from "^4.0.0"
     write-json-file "^3.2.0"
 
+"@lerna/project@^3.21.0":
+  version "3.21.0"
+  resolved "https://registry.yarnpkg.com/@lerna/project/-/project-3.21.0.tgz#5d784d2d10c561a00f20320bcdb040997c10502d"
+  integrity sha512-xT1mrpET2BF11CY32uypV2GPtPVm6Hgtha7D81GQP9iAitk9EccrdNjYGt5UBYASl4CIDXBRxwmTTVGfrCx82A==
+  dependencies:
+    "@lerna/package" "3.16.0"
+    "@lerna/validation-error" "3.13.0"
+    cosmiconfig "^5.1.0"
+    dedent "^0.7.0"
+    dot-prop "^4.2.0"
+    glob-parent "^5.0.0"
+    globby "^9.2.0"
+    load-json-file "^5.3.0"
+    npmlog "^4.1.2"
+    p-map "^2.1.0"
+    resolve-from "^4.0.0"
+    write-json-file "^3.2.0"
+
 "@lerna/prompt@3.18.5":
   version "3.18.5"
   resolved "https://registry.yarnpkg.com/@lerna/prompt/-/prompt-3.18.5.tgz#628cd545f225887d060491ab95df899cfc5218a1"
@@ -7951,10 +7969,10 @@ fastparse@^1.1.2:
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
   integrity sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==
 
-father-build@1.19.2:
-  version "1.19.2"
-  resolved "https://registry.yarnpkg.com/father-build/-/father-build-1.19.2.tgz#4bea41eed6c94dd8e4330c1bdf238b6a2f769e80"
-  integrity sha512-Q5NtpE+LMD8i5utrIEUCb2po4y2HP/jvg7sucwVdOOCOBJny33t/wGybQEOLOLZYOFqw7tR0wPLFsvPnN9d0uw==
+father-build@1.19.6:
+  version "1.19.6"
+  resolved "https://registry.yarnpkg.com/father-build/-/father-build-1.19.6.tgz#d84b5f8d17e719ffab6b378e8100657fea22a9d3"
+  integrity sha512-InxKSw8hQi1BAiKUyK/bgDuY3O8CoRqN2k4u3Aa16sDrk05iCHwyLSk/aVN/MkuS4fEPPwECwgisVDhUpXxJvA==
   dependencies:
     "@babel/core" "7.12.3"
     "@babel/plugin-proposal-class-properties" "7.12.1"
@@ -7971,6 +7989,7 @@ father-build@1.19.2:
     "@babel/preset-react" "7.12.1"
     "@babel/preset-typescript" "7.12.1"
     "@babel/register" "7.12.1"
+    "@lerna/project" "^3.21.0"
     "@rollup/plugin-babel" "5.2.1"
     "@rollup/plugin-commonjs" "16.0.0"
     "@rollup/plugin-inject" "4.0.2"
@@ -7992,7 +8011,7 @@ father-build@1.19.2:
     gulp-typescript "5.0.1"
     less "3.9.0"
     less-plugin-npm-import "2.1.0"
-    lodash "4.17.19"
+    lodash "4.17.21"
     rimraf "2.6.3"
     rollup "2.33.3"
     rollup-plugin-postcss "3.1.8"
@@ -10457,15 +10476,15 @@ lodash@4.17.15, "lodash@>=3.5 <5", lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-lodash@4.17.19:
-  version "4.17.19"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
-  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
-
 lodash@4.17.20, lodash@^4.17.19:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+
+lodash@4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loglevel@^1.6.2:
   version "1.6.8"
